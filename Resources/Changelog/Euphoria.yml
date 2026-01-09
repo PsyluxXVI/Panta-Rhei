@@ -71,3 +71,11 @@ Entries:
       message: Bar
   id: 9
   time: '2026-01-08T20:59:27.0000000+00:00'
+- author: SyaoranFox
+  changes:
+    - type: Add
+      message: Vampirism
+    - type: Add
+      message: Being a living blood bag
+  id: 10
+  time: '2026-01-09T07:08:04.0000000+00:00'
