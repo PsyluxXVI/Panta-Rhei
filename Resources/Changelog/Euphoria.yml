@@ -93,3 +93,13 @@ Entries:
       message: Added Floof Chemicals and Drinks
   id: 12
   time: '2026-01-11T01:44:32.0000000+00:00'
+- author: SyaoranFox
+  changes:
+    - type: Add
+      message: Plushies
+    - type: Add
+      message: Fleshlights
+    - type: Add
+      message: EnergySabre and NoPaint tags
+  id: 13
+  time: '2026-01-11T23:45:26.0000000+00:00'
