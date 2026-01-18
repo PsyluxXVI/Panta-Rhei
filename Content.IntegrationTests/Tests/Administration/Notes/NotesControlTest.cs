@@ -50,7 +50,7 @@ public sealed class NotesControlTest : InteractionTest
         // Check that the new note exists
         await RunTicks(5);
         Assert.That(noteCtrl.Notes.ChildCount, Is.EqualTo(1));
-        var note = (AdminNotesLine)noteCtrl.Notes.Children[0];
+        var note = (AdminNotesLine)noteCtrl.Notes.Children.ElementAt(0);
         Assert.That(note.Note.Message, Is.EqualTo(msg));
     }
 }
