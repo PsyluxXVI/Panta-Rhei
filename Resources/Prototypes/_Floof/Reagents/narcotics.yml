@@ -21,7 +21,7 @@
           - "reagent-effect-aphrodisiac-mild5"
         probability: 0.035
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 50
       - !type:PopupMessage # Overdose causes nausea and vomiting
         type: Local
@@ -30,15 +30,15 @@
           - "reagent-effect-aphrodisiac-mildoverdose"
         probability: 0.06
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             min: 50
       - !type:Drunk
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 50
-      - !type:ChemVomit
+      - !type:Vomit
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 60
         probability: 0.05
       - !type:PopupMessage
@@ -48,7 +48,7 @@
           - "reagent-effect-aphrodisiac-fade" # A decent chance to notify the player when their meds run out, but could happen silently.
         probability: 0.35
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 0.1
 
 - type: reagent
@@ -74,7 +74,7 @@
           - "reagent-effect-aphrodisiac-normal5"
         probability: 0.04
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           max: 16.5
       - !type:PopupMessage
         type: Local
@@ -88,33 +88,32 @@
           - "reagent-effect-aphrodisiac-normaloverdose6"
         probability: 0.06
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 16.5
       - !type:Emote
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 16.5
         emote: Yawn
         showInChat: true
         probability: 0.02
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.8
         sprintSpeedModifier: 0.8
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 16.5
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 30.0
         key: ForcedSleep
         component: ForcedSleeping
-        refresh: false
         type: Add
         probability: 0.1
       - !type:HealthChange # poisons you if you take way too much
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 30
         damage:
           types:
@@ -126,7 +125,7 @@
           - "reagent-effect-aphrodisiac-fade" # A decent chance to notify the player when their meds run out, but could happen silently.
         probability: 0.32
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 0.1
 
 - type: reagent
@@ -150,11 +149,11 @@
         - reagent-effect-aphrodisiac-strong2
         - reagent-effect-aphrodisiac-strong3
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           max: 10.0
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 10.0
         damage:
           types:
@@ -169,7 +168,7 @@
         - reagent-effect-aphrodisiac-strongoverdose3
         - reagent-effect-aphrodisiac-strongoverdose4
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 10.0
       - !type:PopupMessage
         type: Local
@@ -178,5 +177,5 @@
         messages:
           - "reagent-effect-aphrodisiac-fade"
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 0.1

@@ -1781,7 +1781,8 @@
   - type: Crayon
     color: white
     selectableColor: true
-    capacity: 500
+  - type: LimitedCharges
+    maxCharges: 500
   - type: Edible
     utensilRequired: true # I ate my fucking paintbrush
     utensil: Fork
