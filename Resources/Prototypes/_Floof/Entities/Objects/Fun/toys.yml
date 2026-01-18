@@ -633,9 +633,11 @@
       params:
         variation: 0.05
         volume: 1.2
-  - type: Drink
+  - type: Edible
+    edible: Drink
+    destroyOnEmpty: false
+    utensil: None
     solution: fleshlight
-    ignoreEmpty: true
   - type: SolutionContainerManager
     solutions:
       fleshlight:
@@ -1192,9 +1194,11 @@
         variation: 0.05
         volume: 4
   - type: MultiHandedItem
-  - type: Drink
+  - type: Edible
+    edible: Drink
+    destroyOnEmpty: false
+    utensil: None
     solution: fleshlight
-    ignoreEmpty: true
   - type: SolutionContainerManager
     solutions:
       fleshlight:
