@@ -124,7 +124,6 @@
         reagents:
         - ReagentId: Laughter
           Quantity: 1
-      bloodReagent: Laughter
 
 - type: entity
   name: behonker
