@@ -21,28 +21,29 @@ public sealed class StationPowerTests
     private const float MinimumPowerDurationSeconds = 10 * 60;
 
     // Begin DeltaV Additions - DeltaV maps for testing
-    private static readonly string[] GameMaps =
-    [
-        "Academy",
-        "Arena",
-        "Asterisk",
-        "Byoin",
-        "Chibi",
-        "Division",
-        "Edge",
-        "Elegance",
-        "Glacier",
-        "Hammurabi",
-        "TheHive",
-        "Lighthouse",
-        "Micro",
-        "Ovni",
-        "Pebble",
-        "Shoukou",
-        "Submarine",
-        "Terra",
-        "Tortuga",
-    ];
+    // Floofstation - replaced with the PostMapInit pool
+    private static readonly string[] GameMaps = PostMapInitTest.GameMaps;
+    // [
+    //     "Academy",
+    //     "Arena",
+    //     "Asterisk",
+    //     "Byoin",
+    //     "Chibi",
+    //     "Division",
+    //     "Edge",
+    //     "Elegance",
+    //     "Glacier",
+    //     "Hammurabi",
+    //     "TheHive",
+    //     "Lighthouse",
+    //     "Micro",
+    //     "Ovni",
+    //     "Pebble",
+    //     "Shoukou",
+    //     "Submarine",
+    //     "Terra",
+    //     "Tortuga",
+    // ];
     // Begin DeltaV Additions - DeltaV maps for testing
 
     [Explicit]
