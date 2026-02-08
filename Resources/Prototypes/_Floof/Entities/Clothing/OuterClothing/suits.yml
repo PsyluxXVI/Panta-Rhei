@@ -12,7 +12,3 @@
     sprite: _Floof/Clothing/OuterClothing/Suits/shrimpfishermansuit.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatShrimpFishermanHood
-  - type: ContainerContainer
-    containers:
-      toggleable-clothing: !type:ContainerSlot {}
-      toggleable-under-clothing: !type:ContainerSlot {} # DeltaV - Allow hats under toggleable clothing

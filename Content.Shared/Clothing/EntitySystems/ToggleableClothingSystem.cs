@@ -140,12 +140,12 @@ public sealed partial class ToggleableClothingSystem : EntitySystem // DeltaV - 
             || toggleCom.Container == null)
             return;
 
-        var parent = Transform(uid).ParentUid; // DeltaV - Allow hats under toggleable helms 
+        var parent = Transform(uid).ParentUid; // DeltaV - Allow hats under toggleable helms
         if (!_inventorySystem.TryUnequip(Transform(uid).ParentUid, toggleCom.Slot, force: true))
             return;
 
         _containerSystem.Insert(uid, toggleCom.Container);
-        TryEquipUnderClothing(parent, component); // DeltaV - Allow hats under toggleable helms 
+        TryEquipUnderClothing(parent, component); // DeltaV - Allow hats under toggleable helms
         args.Handled = true;
     }
 
@@ -286,8 +286,9 @@ public sealed partial class ToggleableClothingSystem : EntitySystem // DeltaV - 
 
     private void OnInit(EntityUid uid, ToggleableClothingComponent component, ComponentInit args)
     {
-        component.Container = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.ContainerId);
-        component.UnderClothingContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.UnderClothingContainerId); // Wayfarer - Allow hats under toggleable helms!
+        // Floofstation - moved to MapInit to save us some boilerplate.
+        // component.Container = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.ContainerId);
+        // component.UnderClothingContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.UnderClothingContainerId); // Wayfarer - Allow hats under toggleable helms!
     }
 
     /// <summary>
@@ -296,6 +297,10 @@ public sealed partial class ToggleableClothingSystem : EntitySystem // DeltaV - 
     /// </summary>
     private void OnMapInit(EntityUid uid, ToggleableClothingComponent component, MapInitEvent args)
     {
+        // Floofstation - moved from above
+        component.Container = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.ContainerId);
+        component.UnderClothingContainer = _containerSystem.EnsureContainer<ContainerSlot>(uid, component.UnderClothingContainerId); // Wayfarer - Allow hats under toggleable helms!
+
         if (component.Container!.ContainedEntity is {} ent)
         {
             DebugTools.Assert(component.ClothingUid == ent, "Unexpected entity present inside of a toggleable clothing container.");
