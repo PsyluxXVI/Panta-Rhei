@@ -352,3 +352,9 @@ Entries:
         an animatable tail.
   id: 42
   time: '2026-02-08T01:56:01.0000000+00:00'
+- author: Mnemotechnician
+  changes:
+    - type: Add
+      message: Merged upstream changes up to 2026-02-07.
+  id: 43
+  time: '2026-02-08T04:45:39.0000000+00:00'
