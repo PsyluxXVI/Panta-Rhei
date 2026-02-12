@@ -408,3 +408,11 @@ Entries:
         toolshed commands. Apparently this is a 2 year old bug from wizden.
   id: 49
   time: '2026-02-11T07:58:36.0000000+00:00'
+- author: JFerrix
+  changes:
+    - type: Fix
+      message: >-
+        Changed Tajaran, Shadowkin and Resomi to use hsv colors instead of
+        skintones.
+  id: 50
+  time: '2026-02-12T03:43:42.0000000+00:00'
